@@ -1,0 +1,13 @@
+html, body, #root { min-height: 100%; margin: 0; }
+body { background: #fff9f4; }
+.exact-site { width: 100%; min-height: 100vh; background: linear-gradient(90deg, #fff9f4, #fff1e9 50%, #fff9f4); }
+.mockup-frame { position: relative; width: min(100vw, 1520px); margin: 0 auto; opacity: 0; transition: opacity 180ms ease; box-shadow: 0 16px 70px rgba(65, 39, 24, .08); background: #fffaf6; }
+.mockup-frame.loaded { opacity: 1; }
+.mockup-frame img { display: block; width: 100%; height: auto; user-select: none; -webkit-user-drag: none; }
+.hotspots { position: absolute; inset: 0; pointer-events: none; }
+.hotspots button { position: absolute; border: 0; background: transparent; pointer-events: auto; cursor: pointer; padding: 0; }
+.hotspots button:focus-visible { outline: 2px solid rgba(0, 96, 113, .75); outline-offset: -2px; border-radius: 8px; }
+.mobile-nav { display: none; position: sticky; top: 0; z-index: 50; gap: 8px; padding: 10px; overflow-x: auto; background: rgba(255, 250, 246, .96); border-bottom: 1px solid #f1d8ca; }
+.mobile-nav button { border: 1px solid #f1d8ca; background: #fffdf9; color: #11384a; border-radius: 999px; white-space: nowrap; padding: 10px 14px; font: 700 12px Inter, system-ui, sans-serif; }
+.mobile-nav button.active { background: #006171; color: #fff; border-color: #006171; }
+@media (max-width: 760px) { .mobile-nav { display: flex; } .mockup-frame { width: 100%; } .hotspots { display: none; } }
